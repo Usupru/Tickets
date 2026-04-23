@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tickets Events</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/TicketsIcon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script defer src="/home.js"></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="topbar-left">
+          <a class="button button-ghost" href="/">Home</a>
+          <div class="brand">
+            <div class="brand-mark">TE</div>
+            <div>
+              <p class="eyebrow">Ticketing system</p>
+              <h1>Tickets Events</h1>
+            </div>
+          </div>
+        </div>
+        <div class="topbar-actions">
+          <a class="button button-secondary" href="/orders">My Tickets</a>
+          <div data-session-slot>
+            <a class="button button-ghost" href="/login">Sign in</a>
+            <a class="button button-primary" href="/register">Sign up</a>
+          </div>
+        </div>
+      </header>
+
+      <main class="hero">
+        <section class="hero-copy hero-copy--compact">
+          <p class="eyebrow">Featured events</p>
+          <h2>Explore the lineup from the homepage.</h2>
+          <p class="lead">
+            Browse events loaded from PostgreSQL. Each card shows live catalog
+            data: price, capacity, date, location, and description.
+          </p>
+        </section>
+      </main>
+
+      <section class="carousel-shell" aria-label="Event slider">
+        <div class="carousel-head">
+          <div>
+            <p class="eyebrow">Catalog</p>
+            <h3>Available events</h3>
+          </div>
+          <div class="carousel-controls">
+            <button class="icon-button" type="button" data-carousel-prev aria-label="Previous event">
+              &larr;
+            </button>
+            <button class="icon-button" type="button" data-carousel-next aria-label="Next event">
+              &rarr;
+            </button>
+          </div>
+        </div>
+
+        <div class="carousel-viewport">
+          <div class="carousel-track" data-carousel-track></div>
+        </div>
+
+        <div class="carousel-dots" data-carousel-dots aria-label="Slider navigation"></div>
+      </section>
+    </div>
+  </body>
+</html>

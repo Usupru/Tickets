@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Event | Tickets Events</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/TicketsIcon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell admin-page">
+      <header class="topbar">
+        <div class="topbar-left">
+          <a class="button button-ghost page-home-link" href="/">Create event</a>
+          <div class="brand">
+            <div class="brand-mark">TE</div>
+            <div>
+              <p class="eyebrow">Administration</p>
+              <h1>New event</h1>
+            </div>
+          </div>
+        </div>
+        <div class="topbar-actions">
+          <a class="button button-ghost" href="/admin">Back to admin</a>
+        </div>
+      </header>
+
+      <main class="admin-layout admin-layout--single">
+        <section class="hero-copy hero-copy--compact">
+          <p class="eyebrow">Create event</p>
+          <h2>Prepare a new event record.</h2>
+          <p class="lead">
+            This screen is wired to the current event schema and posts directly to
+            the server.
+          </p>
+        </section>
+
+        <section class="admin-panel">
+          <form class="admin-form" action="/admin/create" method="post">
+            <label>
+              Title
+              <input type="text" name="title" placeholder="Summer Night Festival" required />
+            </label>
+            <label>
+              Description
+              <textarea rows="4" name="description" placeholder="Describe the event..." required></textarea>
+            </label>
+            <div class="admin-form__row">
+              <label>
+                Price
+                <input type="number" name="price" min="0" step="0.01" placeholder="45000" required />
+              </label>
+              <label>
+                Capacity
+                <input type="number" name="capacity" min="1" step="1" placeholder="800" required />
+              </label>
+            </div>
+            <div class="admin-form__row">
+              <label>
+                Location
+                <input type="text" name="location" placeholder="Central Arena" required />
+              </label>
+              <label>
+                City
+                <input type="text" placeholder="Buenos Aires" name="city" required />
+              </label>
+            </div>
+            <div class="admin-form__row">
+              <label>
+                Date
+                <input type="datetime-local" name="date" required />
+              </label>
+            </div>
+            <div class="admin-form__actions">
+              <button class="button button-primary" type="submit">Save event</button>
+              <span class="admin-form__note">Wired to the current event schema.</span>
+            </div>
+          </form>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

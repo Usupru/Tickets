@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR Scanner | Tickets Events</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/TicketsIcon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="scanner-page">
+      <section class="scanner-card" aria-label="Ticket scanner" data-event-id="">
+        <div class="scanner-card__copy">
+          <p class="eyebrow">Ticket validation</p>
+          <h1>QR Scanner</h1>
+          <p class="scanner-card__description">
+            Open this page from a staff event to validate tickets with your camera.
+          </p>
+          <div class="scanner-card__meta">
+            <div>
+              <span class="scanner-card__label">Location</span>
+              <strong>Ready</strong>
+            </div>
+            <div>
+              <span class="scanner-card__label">City</span>
+              <strong>Ready</strong>
+            </div>
+            <div>
+              <span class="scanner-card__label">Date</span>
+              <strong>Ready</strong>
+            </div>
+          </div>
+        </div>
+        <div id="qr-reader" class="scanner-reader" aria-label="QR scanner camera view"></div>
+        <p id="scan-result" class="scan-result" aria-live="polite">
+          Open this scanner from a staff event page.
+        </p>
+      </section>
+    </main>
+    <script src="/vendor/html5-qrcode.min.js"></script>
+    <script src="/scanner.js" defer></script>
+  </body>
+</html>

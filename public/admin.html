@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin | Tickets Events</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/TicketsIcon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script defer src="/admin.js"></script>
+  </head>
+  <body>
+    <div class="page-shell admin-page">
+      <header class="topbar">
+        <div class="topbar-left">
+          <a class="button button-ghost page-home-link" href="/">Home</a>
+          <div class="brand">
+            <div class="brand-mark">TE</div>
+            <div>
+              <p class="eyebrow">Administration</p>
+              <h1>Event dashboard</h1>
+            </div>
+          </div>
+        </div>
+        <div class="topbar-actions">
+          <a class="button button-primary" href="/admin/create">Create event</a>
+        </div>
+      </header>
+
+      <main class="admin-layout">
+        <section class="hero-copy hero-copy--compact">
+          <p class="eyebrow">Events overview</p>
+          <h2>Review every available event from one place.</h2>
+          <p class="lead">
+            This screen is frontend-only and reads the admin event list, which also
+            includes pricing, capacity, and remaining seats.
+          </p>
+        </section>
+
+        <section class="admin-panel">
+          <div class="admin-panel__head">
+            <div>
+              <p class="eyebrow">Catalog</p>
+              <h3>Available events</h3>
+            </div>
+            <span class="admin-badge" data-admin-count>0 events</span>
+          </div>
+
+          <div class="admin-grid" data-admin-grid>
+            <div class="admin-empty">Loading events...</div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

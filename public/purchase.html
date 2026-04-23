@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buy tickets | Tickets Events</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/TicketsIcon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script defer src="/purchase.js"></script>
+  </head>
+  <body>
+    <div class="page-shell purchase-page">
+      <header class="topbar">
+        <div class="topbar-left">
+          <a class="button button-ghost page-home-link" href="/">Home</a>
+          <div class="brand">
+            <div class="brand-mark">TE</div>
+            <div>
+              <p class="eyebrow">Ticket checkout</p>
+              <h1>Buy tickets</h1>
+            </div>
+          </div>
+        </div>
+        <div class="topbar-actions">
+          <a class="button button-ghost" data-back-link href="/">Back to event</a>
+        </div>
+      </header>
+
+      <main class="purchase-layout">
+        <section class="purchase-panel purchase-panel--details">
+          <p class="eyebrow">Event summary</p>
+          <h2 data-event-title>Loading event...</h2>
+          <p class="lead" data-event-description>
+            Fetching event information.
+          </p>
+
+          <div class="purchase-status" data-status-slot></div>
+
+          <dl class="purchase-meta">
+            <div>
+              <dt>Price per ticket</dt>
+              <dd data-event-price>--</dd>
+            </div>
+            <div>
+              <dt>Remaining seats</dt>
+              <dd data-remaining-seats>--</dd>
+            </div>
+            <div>
+              <dt>Location</dt>
+              <dd data-event-location>--</dd>
+            </div>
+            <div>
+              <dt>Date</dt>
+              <dd data-event-date>--</dd>
+            </div>
+          </dl>
+        </section>
+
+        <section class="purchase-panel purchase-panel--checkout">
+          <p class="eyebrow">Reservation</p>
+          <h2>Choose how many tickets to reserve.</h2>
+          <form class="purchase-form" action="/reserve" method="post">
+            <input type="hidden" name="eventId" data-event-id />
+            <label class="purchase-field">
+              <span>Quantity</span>
+              <select name="quantity" data-quantity-select></select>
+            </label>
+
+            <div class="purchase-total">
+              <span class="readonly-label">Estimated total</span>
+              <strong class="purchase-total__value" data-total-value>--</strong>
+              <p class="purchase-total__hint" data-total-hint>
+                Select a quantity to calculate the total.
+              </p>
+            </div>
+
+            <button class="button button-primary purchase-submit" type="submit" data-submit-button>
+              Confirm reservation
+            </button>
+          </form>
+
+          <p class="purchase-note">
+            This is a mock checkout. No bank or external payment provider is involved.
+          </p>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up | Tickets Events</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/TicketsIcon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell auth-page">
+      <header class="topbar">
+        <div class="topbar-left">
+          <a class="button button-ghost page-home-link" href="/">Home</a>
+          <div class="brand">
+            <div class="brand-mark">TE</div>
+            <div>
+              <p class="eyebrow">Sign up</p>
+              <h1>Create account</h1>
+            </div>
+          </div>
+        </div>
+        <a class="button button-ghost" href="/login">Sign in</a>
+      </header>
+
+      <main class="auth-layout">
+        <section class="auth-intro">
+          <p class="eyebrow">New user</p>
+          <h2>Sign up to buy tickets and manage your profile.</h2>
+          <p class="lead">
+            Your account lets you buy tickets, track your orders, and access the
+            events platform.
+          </p>
+        </section>
+
+        <form class="auth-card auth-card--large auth-form" action="/register" method="post">
+          <h3>Register</h3>
+          <label>
+            Username
+            <input
+              type="text"
+              name="username"
+              placeholder="Your username"
+              autocomplete="username"
+              required
+            />
+          </label>
+          <label>
+            Email
+            <input
+              type="email"
+              name="email"
+              placeholder="you@example.com"
+              autocomplete="email"
+              required
+            />
+          </label>
+          <label>
+            Password
+            <input
+              type="password"
+              name="password"
+              placeholder="Create a password"
+              autocomplete="new-password"
+              required
+            />
+          </label>
+          <div class="auth-form__actions">
+            <button class="button button-primary" type="submit">Create account</button>
+          </div>
+        </form>
+      </main>
+    </div>
+  </body>
+</html>
