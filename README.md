@@ -151,7 +151,7 @@ If the logged-in user has the <code>staff</code> role, they can:
   <li>Prevent duplicate check-ins</li>
 </ul>
 
-<h2>🧠 How the Code Works</h2>
+<h2>🧠 Application Flow</h2>
 
 <h3>1. Server bootstrap</h3>
 
