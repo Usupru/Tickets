@@ -56,7 +56,7 @@ Make sure you have the following installed:
 <h3>2. Clone the repository</h3>
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/Tickets-Events.git
+git clone https://github.com/Usupru/Tickets.git
 cd Tickets-Events
 ```
 
